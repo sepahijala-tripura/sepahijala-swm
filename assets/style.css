@@ -1,0 +1,308 @@
+/*
+  Sepahijala District — SWM Grievance Portal
+  Design System: "Modern Civic Blue"
+  Fonts: Poppins (headings) + DM Sans (body)
+  Palette: Deep Navy + Vivid Orange
+*/
+
+/* ===== TOKENS ===== */
+:root {
+  --navy:         #1E3A5F;
+  --navy-dark:    #132845;
+  --navy-mid:     #254D7E;
+  --orange:       #F97316;
+  --orange-dark:  #EA6C0A;
+  --orange-pale:  #FFF4ED;
+  --sky:          #EFF4FB;
+  --card:         #FFFFFF;
+  --border:       #C9D8EE;
+  --ink:          #0F1F33;
+  --muted:        #6B7E9A;
+  --success:      #059669;
+  --danger:       #DC2626;
+  --radius:       14px;
+  --radius-sm:    8px;
+  --shadow:       0 2px 14px rgba(30, 58, 95, 0.09);
+  --shadow-md:    0 8px 32px rgba(30, 58, 95, 0.14);
+  --font-heading: 'Poppins', sans-serif;
+  --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--sky);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--navy); }
+
+/* ===== SITE HEADER ===== */
+.site-header {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, var(--navy-mid) 100%);
+  color: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.district-badge {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--navy-dark);
+  flex-shrink: 0;
+  box-shadow: 0 3px 14px rgba(249, 115, 22, 0.45);
+  letter-spacing: 0.5px;
+}
+
+.header-text h1 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  line-height: 1.2;
+}
+
+.header-text p {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 3px;
+  font-weight: 400;
+}
+
+.header-meta { margin-left: auto; }
+
+.sbm-tag {
+  display: inline-block;
+  background: rgba(249, 115, 22, 0.18);
+  color: #FFBA72;
+  border: 1px solid rgba(249, 115, 22, 0.28);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.header-stripe {
+  height: 4px;
+  background: var(--orange);
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 52px 20px 70px;
+}
+
+/* ===== HERO ===== */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--orange-dark);
+  margin-bottom: 10px;
+}
+
+.hero { margin-bottom: 38px; }
+
+.hero h2 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--navy-dark);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.hero-sub {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 58ch;
+}
+
+/* ===== PORTAL CARDS ===== */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.portal-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 28px 24px 24px;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.admin-card { border-top-color: var(--orange); }
+
+.card-icon {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.card-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #E5EDFB;
+  color: var(--navy);
+  width: fit-content;
+  margin-bottom: 6px;
+}
+
+.admin-tag {
+  background: var(--orange-pale);
+  color: var(--orange-dark);
+}
+
+.portal-card h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin: 0;
+}
+
+.portal-card p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.card-cta {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 10px;
+}
+
+.admin-cta { color: var(--orange-dark); }
+
+.cta-arrow {
+  display: inline-block;
+  transition: transform 0.14s ease;
+}
+.portal-card:hover .cta-arrow { transform: translateX(5px); }
+
+/* ===== ULB STRIP ===== */
+.ulb-strip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.ulb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ulb-pill {
+  background: #E5EDFB;
+  color: var(--navy);
+  border: 1px solid #BDD0EF;
+  border-radius: 20px;
+  padding: 7px 15px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===== INFO NOTE ===== */
+.info-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--orange-pale);
+  border: 1px solid rgba(249, 115, 22, 0.22);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.info-icon { font-size: 19px; flex-shrink: 0; margin-top: 1px; }
+
+/* ===== SITE FOOTER ===== */
+.site-footer {
+  text-align: center;
+  padding: 20px 20px 16px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== EMBED PAGES (citizen.html / admin.html) ===== */
+body.embed-page {
+  overflow: hidden;
+  background: #fff;
+}
+
+.embed-wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.embed-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .header-meta { display: none; }
+  .hero h2 { font-size: 24px; }
+  .main-wrap { padding: 32px 16px 52px; }
+}
