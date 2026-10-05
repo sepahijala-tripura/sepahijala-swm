@@ -28,35 +28,3 @@ A modern, serverless Solid Waste Management (SWM) Grievance Redressal Portal bui
 2. **Bishalgarh Municipal Council**
 3. **Sonamura Nagar Panchayet**
 4. **Bishramganj Nagar Panchayet**
-
----
-
-## 📁 Repository Structure
-
-```
-sepahijala-swm/
-├── index.html            # Landing page with Modern Civic Blue theme & ULB directory
-├── citizen.html          # Citizen portal iframe wrapper
-├── admin.html            # Municipal staff dashboard iframe wrapper
-├── assets/
-│   └── style.css         # Complete CSS design system (tokens, responsive layout)
-└── gas/
-    ├── SETUP.md          # Step-by-step Google Apps Script deployment walkthrough
-    ├── citizen/
-    │   ├── Code.gs       # Citizen backend (OTP, validation, Sheet & Drive storage)
-    │   └── Citizen.html  # Standalone citizen web app (Canvas watermark, tracking)
-    └── admin/
-        ├── Code.gs       # Admin backend (auth whitelist, update logic, resolution)
-        └── Admin.html    # Standalone municipal staff dashboard
-```
-
----
-
-## 🚀 Quick Start & Deployment
-
-For full deployment instructions, refer to [**`gas/SETUP.md`**](gas/SETUP.md).
-
-1. Create a Google Drive folder for photos and a Google Sheet for database storage.
-2. Deploy `gas/citizen/` and `gas/admin/` as Google Apps Script Web Apps.
-3. Paste the generated Web App URLs into `citizen.html` and `admin.html`.
-4. Enable GitHub Pages in your repo settings (`Settings` → `Pages` → `Branch: main`).
