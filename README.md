@@ -14,7 +14,7 @@ A modern, serverless Solid Waste Management (SWM) Grievance Redressal Portal bui
   - Interactive "My Complaints" tracking dashboard with real-time status badges and resolution details.
   - Automated confirmation emails upon complaint submission and status updates.
 - **Municipal Admin Dashboard**:
-  - Restricted OTP access restricted to authorized emails (e.g. `tr.souvikroy@gmail.com`).
+  - Restricted OTP access restricted to authorized emails.
   - Real-time statistics counter (Total, New, In-Progress, Forwarded, Resolved, Rejected).
   - Multi-criteria filtering (by ULB, Status, and search terms).
   - Forwarding grievances across departments or neighboring jurisdictions.
