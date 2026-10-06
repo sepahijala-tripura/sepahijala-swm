@@ -385,6 +385,7 @@ body.embed-page {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Top Back Navigation Bar for Iframe Views */
